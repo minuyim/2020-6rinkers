@@ -11,8 +11,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import com.cocktailpick.back.cocktail.domain.Cocktail;
-import com.cocktailpick.back.cocktail.domain.Flavor;
+import com.cocktailpick.back.cocktails.cocktail.domain.Cocktail;
+import com.cocktailpick.back.cocktails.cocktail.domain.Flavor;
 import com.cocktailpick.back.common.exceptions.ErrorCode;
 import com.cocktailpick.back.common.exceptions.InvalidValueException;
 

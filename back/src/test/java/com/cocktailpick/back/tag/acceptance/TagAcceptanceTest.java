@@ -3,7 +3,7 @@ package com.cocktailpick.back.tag.acceptance;
 import static com.cocktailpick.back.common.acceptance.step.AcceptanceStep.*;
 import static com.cocktailpick.back.tag.Fixtures.*;
 import static com.cocktailpick.back.tag.acceptance.step.TagAcceptanceStep.*;
-import static com.cocktailpick.back.user.acceptance.step.AuthAcceptanceStep.*;
+import static com.cocktailpick.back.users.user.acceptance.step.AuthAcceptanceStep.*;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,7 @@ import org.springframework.http.MediaType;
 import com.cocktailpick.back.common.acceptance.AcceptanceTest;
 import com.cocktailpick.back.tag.domain.TagType;
 import com.cocktailpick.back.tag.dto.TagRequest;
-import com.cocktailpick.back.user.dto.AuthResponse;
+import com.cocktailpick.back.users.user.dto.AuthResponse;
 
 import io.restassured.builder.MultiPartSpecBuilder;
 import io.restassured.response.ExtractableResponse;

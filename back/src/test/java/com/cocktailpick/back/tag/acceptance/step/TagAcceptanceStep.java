@@ -1,6 +1,6 @@
 package com.cocktailpick.back.tag.acceptance.step;
 
-import static com.cocktailpick.back.user.acceptance.step.AuthAcceptanceStep.*;
+import static com.cocktailpick.back.users.user.acceptance.step.AuthAcceptanceStep.*;
 import static io.restassured.RestAssured.*;
 import static org.apache.http.HttpHeaders.*;
 import static org.assertj.core.api.Assertions.*;
@@ -14,7 +14,7 @@ import org.springframework.http.MediaType;
 import com.cocktailpick.back.tag.domain.TagType;
 import com.cocktailpick.back.tag.dto.TagRequest;
 import com.cocktailpick.back.tag.dto.TagResponse;
-import com.cocktailpick.back.user.dto.AuthResponse;
+import com.cocktailpick.back.users.user.dto.AuthResponse;
 
 import io.restassured.response.ExtractableResponse;
 import io.restassured.response.Response;

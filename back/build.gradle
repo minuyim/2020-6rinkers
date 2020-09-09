@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.3.1.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'org.asciidoctor.convert' version '1.5.8'
+    id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
     id 'java'
     id 'jacoco'
 }
@@ -30,6 +31,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-security:2.2.1.RELEASE'
     implementation 'org.springframework.security:spring-security-oauth2-client:5.2.1.RELEASE'
+    implementation 'com.querydsl:querydsl-jpa'
     implementation 'io.jsonwebtoken:jjwt:0.5.1'
     implementation group: 'com.opencsv', name: 'opencsv', version: '4.4'
     compileOnly 'org.projectlombok:lombok'
@@ -46,6 +48,25 @@ dependencies {
     implementation 'io.rest-assured:rest-assured-common:3.3.0'
     testImplementation 'io.rest-assured:spring-mock-mvc:3.3.0'
     implementation("com.google.guava:guava:29.0-jre")
+}
+
+def querydslDir = "$buildDir/generated/querydsl"
+
+querydsl {
+    jpa = true
+    querydslSourcesDir = querydslDir
+}
+
+sourceSets {
+    main.java.srcDir querydslDir
+}
+
+configurations {
+    querydsl.extendsFrom compileClasspath
+}
+
+compileQuerydsl {
+    options.annotationProcessorPath = configurations.querydsl
 }
 
 test {

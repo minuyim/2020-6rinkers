@@ -7,9 +7,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.test.context.support.WithSecurityContextFactory;
 
 import com.cocktailpick.back.security.UserPrincipal;
-import com.cocktailpick.back.user.domain.AuthProvider;
-import com.cocktailpick.back.user.domain.Role;
-import com.cocktailpick.back.user.domain.User;
+import com.cocktailpick.back.users.user.domain.User;
 
 public class WithMockCustomUserSecurityContextFactory implements WithSecurityContextFactory<WithMockCustomUser> {
 	@Override

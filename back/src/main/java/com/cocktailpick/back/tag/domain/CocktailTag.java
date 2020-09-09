@@ -1,6 +1,6 @@
 package com.cocktailpick.back.tag.domain;
 
-import com.cocktailpick.back.cocktail.domain.Cocktail;
+import com.cocktailpick.back.cocktails.cocktail.domain.Cocktail;
 import com.cocktailpick.back.common.domain.BaseTimeEntity;
 import lombok.AccessLevel;
 import lombok.Getter;

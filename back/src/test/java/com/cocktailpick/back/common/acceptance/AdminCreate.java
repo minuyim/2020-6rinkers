@@ -6,10 +6,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.cocktailpick.back.user.domain.AuthProvider;
-import com.cocktailpick.back.user.domain.Role;
-import com.cocktailpick.back.user.domain.User;
-import com.cocktailpick.back.user.domain.UserRepository;
+import com.cocktailpick.back.users.user.domain.AuthProvider;
+import com.cocktailpick.back.users.user.domain.Role;
+import com.cocktailpick.back.users.user.domain.User;
+import com.cocktailpick.back.users.user.domain.UserRepository;
 
 @Service
 @Profile("local")
@@ -30,7 +30,7 @@ public class AdminCreate {
         user.setName(ADMIN_NAME);
         user.setEmail(ADMIN_EMAIL);
         user.setPassword(ADMIN_PASSWORD);
-        user.setProvider(AuthProvider.local);
+        user.setProvider(AuthProvider.LOCAL);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setRole(Role.ROLE_ADMIN);
 

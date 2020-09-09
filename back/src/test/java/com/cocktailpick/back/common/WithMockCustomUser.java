@@ -5,8 +5,8 @@ import java.lang.annotation.RetentionPolicy;
 
 import org.springframework.security.test.context.support.WithSecurityContext;
 
-import com.cocktailpick.back.user.domain.AuthProvider;
-import com.cocktailpick.back.user.domain.Role;
+import com.cocktailpick.back.users.user.domain.AuthProvider;
+import com.cocktailpick.back.users.user.domain.Role;
 
 @Retention(RetentionPolicy.RUNTIME)
 @WithSecurityContext(factory = WithMockCustomUserSecurityContextFactory.class)
@@ -23,7 +23,7 @@ public @interface WithMockCustomUser {
 
 	String password() default "password";
 
-	AuthProvider provider() default AuthProvider.local;
+	AuthProvider provider() default AuthProvider.LOCAL;
 
 	Role roles() default Role.ROLE_USER;
 

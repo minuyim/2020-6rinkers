@@ -16,8 +16,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import com.cocktailpick.back.security.CustomUserDetailsService;
+import com.cocktailpick.back.security.LocalUserLoginFilter;
 import com.cocktailpick.back.security.RestAuthenticationEntryPoint;
 import com.cocktailpick.back.security.TokenAuthenticationFilter;
+import com.cocktailpick.back.security.TokenProvider;
 import com.cocktailpick.back.security.oauth2.CustomOAuth2UserService;
 import com.cocktailpick.back.security.oauth2.HttpCookieOAuth2AuthorizationRequestRepository;
 import com.cocktailpick.back.security.oauth2.OAuth2AuthenticationFailureHandler;
@@ -65,6 +67,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	public AuthenticationManager authenticationManagerBean() throws Exception {
 		return super.authenticationManagerBean();
+	}
+
+	@Bean
+	public LocalUserLoginFilter localUserLoginFilter(TokenProvider tokenProvider) throws Exception {
+		LocalUserLoginFilter localUserLoginFilter = new LocalUserLoginFilter(tokenProvider);
+		localUserLoginFilter.setFilterProcessesUrl("/api/auth/login2");
+		localUserLoginFilter.setAuthenticationManager(authenticationManager());
+		return localUserLoginFilter;
 	}
 
 	@Override

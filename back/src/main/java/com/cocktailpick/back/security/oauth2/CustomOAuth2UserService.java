@@ -16,10 +16,10 @@ import com.cocktailpick.back.common.exceptions.OAuth2AuthenticationProcessingExc
 import com.cocktailpick.back.security.UserPrincipal;
 import com.cocktailpick.back.security.oauth2.user.OAuth2UserInfo;
 import com.cocktailpick.back.security.oauth2.user.OAuth2UserInfoFactory;
-import com.cocktailpick.back.user.domain.AuthProvider;
-import com.cocktailpick.back.user.domain.Role;
-import com.cocktailpick.back.user.domain.User;
-import com.cocktailpick.back.user.domain.UserRepository;
+import com.cocktailpick.back.users.user.domain.AuthProvider;
+import com.cocktailpick.back.users.user.domain.Role;
+import com.cocktailpick.back.users.user.domain.User;
+import com.cocktailpick.back.users.user.domain.UserRepository;
 
 @Service
 public class CustomOAuth2UserService extends DefaultOAuth2UserService {

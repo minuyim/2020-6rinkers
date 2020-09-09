@@ -1,7 +1,7 @@
 package com.cocktailpick.back.tag.domain;
 
-import com.cocktailpick.back.cocktail.domain.Cocktail;
-import com.cocktailpick.back.cocktail.domain.Flavor;
+import com.cocktailpick.back.cocktails.cocktail.domain.Cocktail;
+import com.cocktailpick.back.cocktails.cocktail.domain.Flavor;
 import org.assertj.core.api.InstanceOfAssertFactories;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

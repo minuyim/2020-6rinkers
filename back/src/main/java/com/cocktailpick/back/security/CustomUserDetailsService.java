@@ -6,9 +6,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.cocktailpick.back.common.exceptions.ResourceNotFoundException;
-import com.cocktailpick.back.user.domain.User;
-import com.cocktailpick.back.user.domain.UserRepository;
+import com.cocktailpick.back.users.user.domain.User;
+import com.cocktailpick.back.users.user.domain.UserRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 
